@@ -84,6 +84,7 @@ body {
   border-radius: 12px;
   margin: 16px;
   cursor: pointer;
+  gap: 18px;
 }
 
 link:hover {
