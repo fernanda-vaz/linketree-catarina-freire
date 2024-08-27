@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fonte-texto: "Lato", sans-serif;
+  --fonte-titulo: "Montserrat", sans-serif;
+  --cor-principal: #af4b23;
+  --cor-secundaria: #b0755d;
+  --cor-gradiente: linear-gradient(
+    180deg,
+    rgba(175, 75, 35, 1) 8%,
+    rgba(176, 117, 93, 1) 100%
+  );
+}
+
+body {
+  font-family: var(--fonte-texto);
+  font-weight: 400;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--cor-gradiente);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./assets/bg-2.2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  width: 350px;
+  height: 750px;
+}
+
+.container-perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  gap: 12px;
+  text-align: center;
+}
+
+.perfil-foto {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.titulo {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.subtitulo {
+  font-family: var(--fonte-texto);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.efeito {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 40px;
+  background-color: rgba(176, 117, 93, 0.7);
+  text-decoration: none;
+  color: #000000;
+  border-radius: 12px;
+  margin: 16px;
+  cursor: pointer;
+}
+
+link:hover {
+  opacity: 0.2;
+  transform: scale(1.05);
+}
+
+.rodape {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(15px);
+  transform: translateX(-100%);
+  transition: all 1.2s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0);
+  transition: all 1.2s;
+}
+
+.efeito :nth-child(2) {
+  transition-delay: 400ms;
+}
+
+.efeito :nth-child(3) {
+  transition-delay: 700ms;
+}
+
+.efeito :nth-child(4) {
+  transition-delay: 1000ms;
+}
+
+.efeito :nth-child(5) {
+  transition-delay: 1300ms;
+}
